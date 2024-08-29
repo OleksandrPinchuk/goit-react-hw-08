@@ -1,0 +1,22 @@
+.item {
+    border: 1px solid;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 10px;
+    width: auto;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+}
+
+.svg {
+    margin-right: 8px;
+    height: 24px;
+    width: 24px;
+}
+
