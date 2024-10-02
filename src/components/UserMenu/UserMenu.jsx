@@ -12,7 +12,7 @@ const UserMenu = () => {
 
     return (
         <div className="flex">
-            <p>Welcome {user.name} </p>
+            <p>Welcome {userName} </p>
             <button type="button" onClick={handleLogOut}>logOut</button>
         </div>
     )
