@@ -1,9 +1,10 @@
 import Contact from '../Contact/Contact';
 import css from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectError, selectFilteredContacts, selectLoading } from '../../redux/selectors';
+import { selectError, selectLoading } from '../../redux/contacts/selectors.js';
 import { useEffect } from 'react';
-import { deleteContact, fetchContacts } from '../../redux/contactsOps';
+import { deleteContact, fetchContacts } from '../../redux/contacts/operations.js';
+import { selectFilteredContacts } from '../../redux/filters/selectors.js';
 
 const ContactList = () => {
     const loading = useSelector(selectLoading);

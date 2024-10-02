@@ -1,20 +1,20 @@
-import { contactsReducer } from "./contactsSlice";
-import { filterReducer } from "./filtersSlice";
+import { contactsReducer } from "./contacts/slice";
+import { filterReducer } from "./filters/slice";
 
 export const rootReducer = {
     contacts: contactsReducer,
     filter: filterReducer,
 };
 
-import { combineReducers } from '@reduxjs/toolkit';
-import contactsReducer from './contacts/contactsSlice';
-import filtersReducer from './filters/filtersSlice';
-import authReducer from './auth/authSlice';
+// import { combineReducers } from '@reduxjs/toolkit';
+// import contactsReducer from './contacts/slice';
+// import filtersReducer from './filters/slice';
+// import authReducer from './auth/slice';
 
-const rootReducer = combineReducers({
-  contacts: contactsReducer,
-  filters: filtersReducer,
-  auth: authReducer,
-});
+// const rootReducer = combineReducers({
+//   contacts: contactsReducer,
+//   filters: filtersReducer,
+//   auth: authReducer,
+// });
 
-export default rootReducer;
+// export default rootReducer;
