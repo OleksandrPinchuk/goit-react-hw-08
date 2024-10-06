@@ -2,7 +2,6 @@ import css from './Contact.module.css'
 import { TiUser } from "react-icons/ti";
 import { TiPhone } from "react-icons/ti";
 
-
 const Contact = ({ contact, handleDelete }) => {
     return (
         <li className={css.item}>
@@ -21,4 +20,4 @@ const Contact = ({ contact, handleDelete }) => {
     )
 }
 
-export default Contact
+export default Contact;

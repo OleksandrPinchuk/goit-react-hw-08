@@ -7,20 +7,20 @@ import contactsReducer from "./contacts/slice";
 import filtersReducer from "./filters/slice"; 
 
 
-const authPersistConfig = {
-    key: "auth",
+const persistConfig = {
+    key: "jwt-token",
     storage,
     whitelist: ["token"],
 };
 
-const rootReducer = {
-    auth: persistReducer(authPersistConfig, authReducer),
-    contacts: contactsReducer,
-    filters: filtersReducer,
-};
+const persistedAuthReducer = persistReducer(persistConfig, authReducer);
 
 const store = configureStore({
-    reducer: rootReducer,
+    reducer: {
+        auth: persistedAuthReducer,
+        contacts: contactsReducer,
+        filters: filtersReducer,
+    },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: {
@@ -29,7 +29,5 @@ const store = configureStore({
         }),
 });
 
-
-export const persistor = persistStore(store);
 export default store;
-
+export const persistor = persistStore(store);

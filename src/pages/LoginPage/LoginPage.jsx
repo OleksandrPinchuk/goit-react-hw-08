@@ -1,9 +1,10 @@
 import LoginForm from '../../components/LoginForm/LoginForm';
+import PageTitle from '../../components/PageTitle/PageTitle';
 
 const LoginPage = () => {
   return (
     <div>
-      <h2>Login Page</h2>
+      <PageTitle>Please log in</PageTitle>
       <LoginForm />
     </div>
   );

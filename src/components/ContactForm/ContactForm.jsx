@@ -11,7 +11,7 @@ const initialValues = {
 };
 
 const validationSchema = Yup.object().shape({
-    name: Yup.string().min(3, 'min 3').max(20, 'max 20').required('required'),
+    name: Yup.string().min(3, 'min 3').max(30, 'max 30').required('required'),
     number: Yup.number().min(3, 'min 3').required('required'),
 });   
 
@@ -44,4 +44,4 @@ const ContactForm = () => {
     )
 }
 
-export default ContactForm
+export default ContactForm;
